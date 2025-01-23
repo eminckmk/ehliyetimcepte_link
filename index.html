@@ -10,13 +10,13 @@
 
         if (/android/i.test(userAgent)) {
             // Android cihazlar için Google Play Store bağlantısına yönlendirme
-            window.location.href = "https://play.google.com/store/apps/details?id=YOUR_APP_ID";
+            window.location.href = "https://play.google.com/store/apps/details?id=com.codeman.ehliyetimcepte";
         } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
             // iOS cihazlar için App Store bağlantısına yönlendirme
             window.location.href = "https://apps.apple.com/app/ehliyet-sınav-soruları-tr-2024/id6474077729";
         } else {
             // Diğer platformlar için genel bir sayfa gösterebilirsiniz
-            document.write("<h1>Lütfen uygulamayı mobil cihazınızdan indirin!</h1>");
+             window.location.href = "https://apps.apple.com/app/ehliyet-sınav-soruları-tr-2024/id6474077729";
         }
     </script>
 </head>
