@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Kullanıcının cihaz türünü tespit et
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            // Android cihazlar için Google Play Store bağlantısına yönlendirme
+            window.location.href = "https://play.google.com/store/apps/details?id=YOUR_APP_ID";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            // iOS cihazlar için App Store bağlantısına yönlendirme
+            window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+        } else {
+            // Diğer platformlar için genel bir sayfa gösterebilirsiniz
+            document.write("<h1>Lütfen uygulamayı mobil cihazınızdan indirin!</h1>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
